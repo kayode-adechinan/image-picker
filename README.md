@@ -1,7 +1,6 @@
 # How to upload file from react native expo
 
 ```jsx
-
 import React, { useState, useEffect } from 'react';
 import { Button, Image, View, Platform } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
@@ -43,9 +42,7 @@ export default function ImagePickerExample() {
       type: `image/${fileType}`,
     });
 
-    
-
-    fetch('https://eyecorest.herokuapp.com/upload', {
+    fetch('https://endpoint/upload', {
       method: 'POST',
       body: formData,
     })
@@ -72,6 +69,4 @@ export default function ImagePickerExample() {
     </View>
   );
 }
-
-
 ```
